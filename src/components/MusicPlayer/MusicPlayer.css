@@ -1,18 +1,18 @@
 .music-player {
+    background-color: #DBDBDB;
+    bottom: 0;
+    color: #000000;
     display: flex;
     height: 100px;
-    width: 100vw;
     overflow: hidden;
-    background-color: #DBDBDB;
-    color: #000000;
     position: fixed;
-    bottom: 0;
+    width: 100vw;
 }
 
 .track-info {
+    align-items: center;
     display: flex;
     width: 400px;
-    align-items: center;
 }
 
 .album-art {
@@ -30,10 +30,10 @@
 }
 
 .icons {
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    align-items: center;
     margin-left: 8px;
 }
 
@@ -65,4 +65,3 @@
 .rhap_volume-button {
     color: #000000;
 }
-
