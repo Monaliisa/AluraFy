@@ -1,0 +1,68 @@
+.music-player {
+    display: flex;
+    height: 100px;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #DBDBDB;
+    color: #000000;
+    position: fixed;
+    bottom: 0;
+}
+
+.track-info {
+    display: flex;
+    width: 400px;
+    align-items: center;
+}
+
+.album-art {
+    width: 100px;
+}
+
+.track-details {
+    display: flex;
+    gap: 8px;
+    margin-left: 8px;
+}
+
+.song-info h3, .song-info p {
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-left: 8px;
+}
+
+/* CUSTOM PLAYER */
+
+.rhap_container {
+    background-color: #DBDBDB;
+    box-shadow: none;
+}
+
+.rhap_progress-bar, .rhap_volume-bar {
+    background-color: #CCCCCC;
+}
+
+.rhap_download-progress {
+    background-color: #AAAAAA;
+}
+
+.rhap_progress-filled, 
+.rhap_progress-indicator, 
+.rhap_volume-indicator, 
+.rhap_volume-filled {
+    background-color: #000000;
+}
+
+.rhap_time, 
+.rhap_main-controls-button, 
+.rhap_repeat-button, 
+.rhap_volume-button {
+    color: #000000;
+}
+
