@@ -1,0 +1,18 @@
+.music-card{
+    text-align: center;
+    width: 190px;
+}
+
+.music-card img{
+    border-radius: 10px;
+}
+
+.music-card h3, .music-card p{
+    font-weight: 400;
+    margin: 0;
+    font-size: 18px;
+}
+
+.music-card p{
+    color: rgba(0, 0, 0, 0.61);
+}
