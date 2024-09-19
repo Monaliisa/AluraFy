@@ -15,7 +15,46 @@ Desenvolvimento de um sistema de streaming de música, chamado Alurafy.
  * Squad Verde: Back-End
 
 
-## Ao longo do projeto, as seguintes habilidades foram desenvolvidas:
+## Modelagem 
+
+Nessa seção, apresentamos uma tabela que descreve o diagrama de entidades e relacionamentos (ER), facilitando a visualização e compreensão da estrutura do banco de dados. O diagrama ilustra as entidades "Artista", "Música" e "Usuário", além dos relacionamentos entre elas, permitindo uma análise clara das dependências e interações dentro do sistema de gerenciamento de músicas.
+
+### Tabelas
+
+**Artista**
+
+| Coluna  | Tipo     | Comentário    |
+|---------|----------|---------------|
+| id      | NUMERIC  | Primary Key   |
+| nome    | VARCHAR  | Nome do Artista |
+| imagem  | BLOB     | Imagem do Artista |
+
+**Música**
+
+| Coluna         | Tipo     | Comentário             |
+|----------------|----------|------------------------|
+| id             | NUMERIC  | Primary Key            |
+| título         | VARCHAR  | Título da Música       |
+| id_artista     | NUMERIC  | Foreign Key (Artista)  |
+| capa_da_musica | BLOB     | Capa da Música         |
+| gênero         | VARCHAR  | Gênero Musical         |
+| link           | VARCHAR  | Link da Música         |
+
+**Usuário**
+
+| Coluna         | Tipo       | Comentário                |
+|----------------|------------|---------------------------|
+| id             | NUMERIC    | Primary Key               |
+| data_criação   | TIMESTAMP  | Data de Criação da Conta   |
+| email          | VARCHAR    | Email do Usuário          |
+| senha          | VARCHAR    | Senha do Usuário          |
+| nome           | VARCHAR    | Nome do Usuário           |
+
+### Relacionamentos
+
+**Artista** 1:N **Música** (um artista pode ter muitas músicas, uma música pertence a um único artista)
+
+**Usuário** 1:N **Música** (um usuário pode adicionar ou curtir várias músicas, mas uma música pode não estar associada a nenhum usuário)
 
 
 ## Tecnologias Utilizadas
