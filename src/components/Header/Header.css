@@ -1,4 +1,4 @@
-.header{
+.header {
   display: flex;
   width: 100%;
   height: 10%; 
@@ -8,25 +8,22 @@
   top: 0; 
   left: 0; 
   z-index: 1000; 
-  background-color: #EBF4F6; 
+  background-color: var(--light-Mode-background); 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   margin-bottom: 10px;
 }
 
-
-
-.icon-header{
-    max-width: 5%;
-    margin-left: 100px;
+.icon-header {
+  max-width: 5%;
+  margin-left: 100px;
 }
-  .butons {
-    display: flex;
-    gap: 20px; 
-    margin-right: 60px;
-  }
-  
-  .butons a {
-    display: inline-block;
-  }
-  
- 
+
+.butons {
+  display: flex;
+  gap: 20px; 
+  margin-right: 60px;
+}
+
+.butons a {
+  display: inline-block;
+}
