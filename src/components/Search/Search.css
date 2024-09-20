@@ -1,0 +1,31 @@
+.search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    width:100%;
+    padding: 18px 40px; 
+    border-radius: 10px;
+    border: 1px  #FAFAFA;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+    background: #FAFAFA;
+  }
+  
+  .search-input::placeholder {
+    color: #CACACA;
+  }
+  
+  .search-container::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../../assets/Search.svg');
+    background-size: 20px 20px; 
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+  }

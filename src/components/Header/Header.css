@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    width: 100%;
+    height: 10%; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+    background-color: #EBF4F6;
+}
+
+
+.icon-header{
+    max-width: 5%;
+    margin-left: 100px;
+}
+  .butons {
+    display: flex;
+    gap: 20px; 
+    margin-right: 60px;
+  }
+  
+  .butons a {
+    display: inline-block;
+  }
+  
+ 
