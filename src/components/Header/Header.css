@@ -16,6 +16,7 @@
 .icon-header {
   margin-left: 100px;
   max-width: 5%;
+  cursor: pointer;
 }
 
 .butons {
@@ -24,6 +25,7 @@
   margin-right: 60px;
 }
 
-.butons a {
+.butons img {
   display: inline-block;
+  cursor: pointer;
 }
