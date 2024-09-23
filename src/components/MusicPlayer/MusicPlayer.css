@@ -1,7 +1,7 @@
 .music-player {
     background-color: #DBDBDB;
     bottom: 0;
-    color: #000000;
+    color: var(--Black);
     display: flex;
     height: 100px;
     overflow: hidden;
@@ -56,12 +56,12 @@
 .rhap_progress-indicator, 
 .rhap_volume-indicator, 
 .rhap_volume-filled {
-    background-color: #000000;
+    background-color: var(--Black);
 }
 
 .rhap_time, 
 .rhap_main-controls-button, 
 .rhap_repeat-button, 
 .rhap_volume-button {
-    color: #000000;
+    color: var(--Black);
 }

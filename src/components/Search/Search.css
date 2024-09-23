@@ -6,15 +6,15 @@
     width:100%;
     padding: 18px 40px; 
     border-radius: 10px;
-    border: 1px  #FAFAFA;
+    border: 1px var(--Background-camp-text);
     font-size: 16px;
     outline: none;
     border-radius: 10px;
-    background: #FAFAFA;
+    background: var(--Background-camp-text);
   }
   
   .search-input::placeholder {
-    color: #CACACA;
+    color: var(--GreyDetails);
   }
   
   .search-container::before {

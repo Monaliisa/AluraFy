@@ -39,7 +39,7 @@
 }
 
 .form-group input::placeholder {
-    color: #CACACA;
+    color: var(--GreyDetails);
     font-family: "Poppins", sans-serif;
 }
 
@@ -53,7 +53,7 @@
 .button-cancel {
     padding: 10px 20px;
     border: none;
-    color: white;
+    color: var(--Background-camp-text);
     cursor: pointer;
     width: 142px;
     text-transform: uppercase;
@@ -62,12 +62,12 @@
 }
 
 .button-send {
-    background-color: #000000;
+    background-color: var(--Black);
     border-radius: 10px;
 }
 
 .button-cancel {
-    background-color: #CACACA;
+    background-color: var( --GreyDetails);
     border-radius: 10px;
-    color: #000000;
+    color: var(--Black);
 }
