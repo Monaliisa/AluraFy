@@ -1,9 +1,19 @@
 import { CheckCircle } from '@mui/icons-material';
 import './SuccessModal.css';
 
-const SuccessModal = () => {
+const SuccessModal = ({setIsModalVisible, setFormData}) => {
+    const handleCloseModal = () => {
+        setFormData({
+            artist: '',
+            songName: '',
+            albumCover: '',
+            songLink: ''
+        })
+        setIsModalVisible(false)
+    }
+
     return (
-        <section className="modal-background">
+        <section className="modal-background" onClick={handleCloseModal}>
             <div className="modal">
                 <p>Song added successfully!</p>
                 <CheckCircle sx={{ fontSize: 90 }}  />

@@ -1,14 +1,7 @@
 import { useState } from 'react';
 import './MusicForms.css'
 
-const MusicForms = ({ onSubmit }) => {
-    const [formData, setFormData] = useState({
-        artist: '',
-        songName: '',
-        albumCover: '',
-        songLink: ''
-    });
-
+const MusicForms = ({ onSubmit, formData, setFormData }) => {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
