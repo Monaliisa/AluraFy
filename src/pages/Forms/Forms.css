@@ -1,0 +1,4 @@
+.form-group input::placeholder {
+    color: #CACACA;
+    font-family: "Poppins", sans-serif;
+}

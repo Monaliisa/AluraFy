@@ -1,18 +1,22 @@
+/* eslint-disable react/prop-types */
 import MusicCard from "../MusicCard";
 import "./CardList.css";
 
-const CardList = () => {
-    const musics = Array.from({ length: 14 }, (_, index) => index + 1);
+const CardList = ({ title }) => {
+    const songs = Array.from({ length: 14 }, (_, index) => index + 1);
 
     return (
         <section className="cards-container">
-            {musics.map((music, index) => {
-                return (
-                    <div key={index}>
-                        <MusicCard  />
-                    </div>
-                );
-            })}
+            <h3 className="list-title">{title}</h3>
+            <div className="song-list">
+                {songs.map((song, index) => {
+                    return (
+                        <div key={index}>
+                            <MusicCard  />
+                        </div>
+                    );
+                })}
+            </div>
         </section>
 
     );
