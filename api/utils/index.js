@@ -1,1 +1,0 @@
-// Seção que contará com arquivos e métodos extraidos essenciais mas que não se encaixam na estrutura padrão do projeto.
