@@ -3,14 +3,14 @@
   }
   
   .search-input {
-    width:100%;
-    padding: 18px 40px; 
+    background: var(--Background-camp-text);
+    border-radius: 10px;
     border-radius: 10px;
     border: 1px var(--Background-camp-text);
     font-size: 16px;
     outline: none;
-    border-radius: 10px;
-    background: var(--Background-camp-text);
+    padding: 18px 40px; 
+    width:100%;
   }
   
   .search-input::placeholder {
@@ -18,14 +18,14 @@
   }
   
   .search-container::before {
+    background-image: url('../../assets/Search.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px; 
     content: "";
-    position: absolute;
+    height: 20px;
     left: 10px;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url('../../assets/Search.svg');
-    background-size: 20px 20px; 
-    background-repeat: no-repeat;
     width: 20px;
-    height: 20px;
   }

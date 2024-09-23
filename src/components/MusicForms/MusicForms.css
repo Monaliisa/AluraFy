@@ -1,18 +1,18 @@
 .form-section {
-    width: 100vw; 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 100vw; 
 }
 
 .form-container {
-    width: 300px; 
+    border-radius: 10px; 
     margin: 0 auto; 
     padding: 20px; 
-    border-radius: 10px; 
+    width: 300px; 
 }
 
 .form-title {
@@ -25,13 +25,13 @@
 }
 
 .form-group input {
-    width: 100%;
-    padding: 8px 16px;
-    box-sizing: border-box;
-    border: none;
     border-radius: 10px;
-    margin: 10px 0;
+    border: none;
     box-shadow: 0px 4px 4px #00000025;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 8px 16px;
+    width: 100%;
 }
 
 .form-group input:focus {
@@ -51,14 +51,14 @@
 
 .button-send,
 .button-cancel {
-    padding: 10px 20px;
     border: none;
     color: var(--Background-camp-text);
     cursor: pointer;
-    width: 142px;
-    text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    width: 142px;
 }
 
 .button-send {

@@ -1,5 +1,5 @@
 import { CheckCircle } from '@mui/icons-material';
-import "./SuccessModal.css"
+import './SuccessModal.css';
 
 const SuccessModal = () => {
     return (

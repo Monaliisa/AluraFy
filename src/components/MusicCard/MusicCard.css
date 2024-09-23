@@ -8,10 +8,10 @@
 }
 
 .music-card h3, .music-card p{
+    color:  var(--Black);
+    font-size: 18px;
     font-weight: 400;
     margin: 0;
-    font-size: 18px;
-    color:  var(--Black);
 }
 
 .music-card p{

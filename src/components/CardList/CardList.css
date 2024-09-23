@@ -1,6 +1,6 @@
 .cards-container {
-    width:95vw;
     margin: 2.5vh 0 0 2.5vw;
+    width:95vw;
 }
 
 .list-title {
@@ -12,10 +12,10 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 1.25rem;
-    width: 95vw;
     overflow-x: scroll;
     overflow-y: hidden;
     padding: 12px 0;
+    width: 95vw;
 }
 
 /* width */
