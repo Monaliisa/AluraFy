@@ -1,4 +1,4 @@
-import "./MusicCard.css";
+import './MusicCard.css';
 
 const MusicCard = () => {
     return(

@@ -2,7 +2,7 @@ import { Delete, FavoriteBorder } from '@mui/icons-material';
 
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-import "./MusicPlayer.css";
+import './MusicPlayer.css';
 
 const MusicPlayer = () => {
 

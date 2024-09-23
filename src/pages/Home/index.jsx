@@ -1,5 +1,5 @@
-import CardList from "../../components/CardList";
-import Header from "../../components/Header";
+import CardList from '../../components/CardList';
+import Header from '../../components/Header';
 import "./Home.css"
 
 const Home = () => {

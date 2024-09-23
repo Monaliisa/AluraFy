@@ -1,4 +1,4 @@
-import "./SearchMessage.css";
+import './SearchMessage.css';
 
 const SearchMessage = () => {
     return(

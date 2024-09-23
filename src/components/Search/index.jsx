@@ -1,4 +1,4 @@
-import "./Search.css";
+import './Search.css';
 import { useState } from "react";
 
 const Search = () => {

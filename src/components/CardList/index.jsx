@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import MusicCard from "../MusicCard";
-import "./CardList.css";
+import MusicCard from '../MusicCard';
+import './CardList.css';
 
 const CardList = ({ title }) => {
     const songs = Array.from({ length: 14 }, (_, index) => index + 1);
