@@ -17,7 +17,8 @@
     "alurafy": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-h5-audio-player": "^3.9.3"
+    "react-h5-audio-player": "^3.9.3",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
