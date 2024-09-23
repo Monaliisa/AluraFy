@@ -1,7 +1,6 @@
 .header {
   align-items: center;
   background-color: var(--light-Mode-background); 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   display: flex;
   height: 10%; 
   justify-content: space-between;
@@ -11,6 +10,7 @@
   top: 0; 
   width: 100%;
   z-index: 1000; 
+  padding-top: 8px;
 }
 
 .icon-header {
