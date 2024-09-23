@@ -19,9 +19,18 @@ const Forms = () => {
 
     return (
         <>
-            {isModalVisible && <SuccessModal setIsModalVisible={setIsModalVisible} setFormData={setFormData} />}
+            {isModalVisible && 
+                <SuccessModal 
+                    setIsModalVisible={setIsModalVisible} 
+                    setFormData={setFormData} 
+                />
+            }
             <Header />
-            <MusicForms onSubmit={handleFormSubmit} formData={formData} setFormData={setFormData} />
+            <MusicForms 
+                onSubmit={handleFormSubmit} 
+                formData={formData} 
+                setFormData={setFormData} 
+            />
         </>
     )
 }

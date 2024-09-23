@@ -1,7 +1,9 @@
-import { useState } from 'react';
 import './MusicForms.css'
+import { useNavigate } from 'react-router-dom';
 
 const MusicForms = ({ onSubmit, formData, setFormData }) => {
+    const navigate = useNavigate();
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -65,12 +67,7 @@ const MusicForms = ({ onSubmit, formData, setFormData }) => {
                 <div className="button-group">
                     <button type="submit" className="button-send">Send</button>
                     <button type="button" className="button-cancel"
-                        onClick={() => setFormData({
-                            artist: '',
-                            songName: '',
-                            albumCover: '',
-                            songLink: ''
-                        })}>
+                        onClick={() => navigate("/")}>
                         Cancel
                     </button>
                 </div>
