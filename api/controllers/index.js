@@ -1,1 +1,0 @@
-// Aqui estão a parte lógica/métodos para serem chamados nas Routes
