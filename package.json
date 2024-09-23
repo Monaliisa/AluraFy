@@ -1,0 +1,31 @@
+{
+  "name": "alurafy",
+  "version": "1.0.0",
+  "description": "API de gerenciamento do Streaming de musica Alurafy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Monaliisa/AluraFy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Monaliisa/AluraFy/issues"
+  },
+  "homepage": "https://github.com/Monaliisa/AluraFy#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "sequelize": "^6.37.3",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "sequelize-cli": "^6.6.2"
+  }
+}
