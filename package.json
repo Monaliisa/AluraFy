@@ -7,7 +7,7 @@
     "node": "20.x"
   },
   "scripts": {
-    "dev": "node index.js",
+    "vercel-build": "npx ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
@@ -24,6 +24,7 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "express": "^4.21.0",
+    "pg": "^8.13.0",
     "sequelize": "^6.37.3",
     "sqlite3": "^5.1.7",
     "swagger-jsdoc": "^6.2.8",
