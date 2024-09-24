@@ -29,3 +29,13 @@
     transform: translateY(-50%);
     width: 20px;
   }
+
+  
+
+
+  @media (max-width: 768px) {
+    .search-container{
+      display: none;
+    }
+    
+  }

@@ -23,4 +23,5 @@
     align-items: center;
     font-size: 36px;
     gap: 8px;
+    color: var(--Black);
 }

@@ -6,6 +6,7 @@
 .list-title {
     font-size: 24px;
     margin-bottom: 2vh;
+    color:  var(--Black);
 }
 
 .song-list {

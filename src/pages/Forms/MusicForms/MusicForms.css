@@ -18,10 +18,12 @@
 .form-title {
     font-size: 24px;
     font-weight: 400;
+    color: var(--Black);
 }
 
 .form-group {
     font-weight: 400;
+    color: var(--Black);
 }
 
 .form-group input {
@@ -62,12 +64,13 @@
 }
 
 .button-send {
-    background-color: var(--Black);
+    background-color: #000;
+    color: var(--Background-camp-text);
     border-radius: 10px;
 }
 
 .button-cancel {
     background-color: var( --GreyDetails);
     border-radius: 10px;
-    color: var(--Black);
+    color: #000;
 }
