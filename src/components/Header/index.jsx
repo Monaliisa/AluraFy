@@ -7,11 +7,11 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import SearchIcon from '@mui/icons-material/Search';
-import Search from '../Search'; 
+import Search from '../Search';
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [showSearch, setShowSearch] = useState(false); 
+  const [showSearch, setShowSearch] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -21,50 +21,52 @@ const Header = () => {
   };
 
   const handleSearchClick = () => {
-    setShowSearch(!showSearch); 
+    setShowSearch(!showSearch);
   };
 
   return (
     <header className={`header ${isDarkMode ? 'dark' : 'light'}`}>
-      <img 
+      <img
         className="icon-header"
-        src={isDarkMode ? logoDark : logoLight} 
-        alt="Logo" 
+        src={isDarkMode ? logoDark : logoLight}
+        alt="Logo"
         onClick={() => navigate("/")}
       />
-      
-      <div className="search-container">
-         <Search /> 
+
+      <div className="search-container" 
+        onClick={() => location.pathname !== "/search" && navigate("/search")}
+      >
+        <Search />
       </div>
-      
+
       <div className="buttons">
         <div className='search-on'>
-          <SearchIcon 
-            onClick={handleSearchClick} 
-            className={`toggle-icon add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`} 
+          <SearchIcon
+            onClick={handleSearchClick}
+            className={`toggle-icon add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`}
           />
         </div>
-        
-        {!showSearch && !(location.pathname === "/forms") && ( 
-          <AddCircleIcon 
-            onClick={() => navigate("/forms")} 
-            className={`add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`} 
+
+        {!showSearch && !(location.pathname === "/forms") && (
+          <AddCircleIcon
+            onClick={() => navigate("/forms")}
+            className={`add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`}
             fontSize="large"
             alt="Botão para adicionar músicas"
           />
         )}
-        
-        {!showSearch && ( 
+
+        {!showSearch && (
           isDarkMode ? (
-            <LightModeIcon 
-              onClick={toggleDarkMode} 
-              className={`toggle-icon add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`} 
+            <LightModeIcon
+              onClick={toggleDarkMode}
+              className={`toggle-icon add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`}
               fontSize="large"
             />
           ) : (
-            <DarkModeIcon 
-              onClick={toggleDarkMode} 
-              className={`toggle-icon add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`} 
+            <DarkModeIcon
+              onClick={toggleDarkMode}
+              className={`toggle-icon add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`}
             />
           )
         )}
