@@ -7,11 +7,11 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import SearchIcon from '@mui/icons-material/Search';
-import Search from '../Search'; // Importe o componente Search
+import Search from '../Search'; 
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [showSearch, setShowSearch] = useState(false); // Estado para controlar a visibilidade do componente Search
+  const [showSearch, setShowSearch] = useState(false); 
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   const handleSearchClick = () => {
-    setShowSearch(!showSearch); // Alterna a visibilidade do componente Search
+    setShowSearch(!showSearch); 
   };
 
   return (
@@ -40,12 +40,12 @@ const Header = () => {
       <div className="buttons">
         <div className='search-on'>
           <SearchIcon 
-            onClick={handleSearchClick} // Lógica de clique para mostrar/esconder o componente Search
+            onClick={handleSearchClick} 
             className={`toggle-icon add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`} 
           />
         </div>
         
-        {!showSearch && !(location.pathname === "/forms") && ( // Esconde o botão AddCircleIcon se showSearch for true
+        {!showSearch && !(location.pathname === "/forms") && ( 
           <AddCircleIcon 
             onClick={() => navigate("/forms")} 
             className={`add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`} 
@@ -54,7 +54,7 @@ const Header = () => {
           />
         )}
         
-        {!showSearch && ( // Esconde o botão de modo escuro/claro se showSearch for true
+        {!showSearch && ( 
           isDarkMode ? (
             <LightModeIcon 
               onClick={toggleDarkMode} 
