@@ -1,6 +1,7 @@
 .music-card{
     text-align: center;
     width: 190px;
+    cursor: pointer;
 }
 
 .music-card img{

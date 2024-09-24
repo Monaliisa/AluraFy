@@ -2,7 +2,7 @@
 import MusicCard from '../MusicCard';
 import './CardList.css';
 
-const CardList = ({ title }) => {
+const CardList = ({ title, setSelectedSong }) => {
     const songs = Array.from({ length: 14 }, (_, index) => index + 1);
 
     return (
@@ -12,7 +12,7 @@ const CardList = ({ title }) => {
                 {songs.map((song, index) => {
                     return (
                         <div key={index}>
-                            <MusicCard  />
+                            <MusicCard setSelectedSong={setSelectedSong} />
                         </div>
                     );
                 })}

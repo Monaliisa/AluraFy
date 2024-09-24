@@ -1,22 +1,32 @@
-import { Delete, FavoriteBorder } from '@mui/icons-material';
+import { Delete, Favorite, FavoriteBorder } from '@mui/icons-material';
 
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import './MusicPlayer.css';
 
-const MusicPlayer = () => {
+const MusicPlayer = ({ selectedSong, setSelectedSong }) => {
+  const { albumCover, title, artist, link, favorite } = selectedSong;
 
   return (
     <div className="music-player">
       <div className="track-info">
-        <img src="billie-album.jpg" alt="Capa do álbum" className="album-art" />
+        <img src={albumCover} alt="Capa do álbum" className="album-art" />
         <div className="track-details">
           <div className="song-info">
-            <h3>birds of a feather</h3>
-            <p>billie eilish</p>
+            <h3>{title}</h3>
+            <p>{artist}</p>
           </div>
           <div className="icons">
-            <FavoriteBorder />
+            {favorite ? 
+              <Favorite color='error' onClick={() => setSelectedSong(s => ({
+                ...s,
+                favorite: false
+              }))} /> : 
+              <FavoriteBorder onClick={() => setSelectedSong(s => ({
+                ...s,
+                favorite: true
+              }))} />
+            }
             <Delete />
           </div>
         </div>
@@ -24,7 +34,7 @@ const MusicPlayer = () => {
 
       <AudioPlayer
         autoPlay={false}
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"
+        src={link}
         onPlay={() => console.log("onPlay")}
       />
     </div>
