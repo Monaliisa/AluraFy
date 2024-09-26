@@ -33,7 +33,7 @@ const MusicPlayer = ({ selectedSong, setSelectedSong }) => {
       </div>
 
       <AudioPlayer
-        autoPlay={false}
+        autoPlay={true}
         src={link}
         onPlay={() => console.log("onPlay")}
       />
