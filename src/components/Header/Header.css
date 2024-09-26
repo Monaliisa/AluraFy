@@ -2,7 +2,7 @@
   align-items: center;
   background-color: var(--light-Mode-background); 
   display: flex;
-  height: 10%; 
+  height: 100px; 
   justify-content: space-between;
   left: 0; 
   margin-bottom: 10px;
