@@ -1,16 +1,6 @@
 import './MusicCard.css';
 
-const MusicCard = ({ setSelectedSong }) => {
-    const song = {
-        title: "FLORIDA!!!",
-        artist: "Taylor Swift",
-        artistId: 1,
-        albumCover: "TTPD.png",
-        genre: "Pop",
-        link: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3",
-        favorite: false
-    }
-
+const MusicCard = ({ song, setSelectedSong }) => {
     return(
         <div className="music-card" onClick={() => setSelectedSong(song)}>
             <img src={song.albumCover} alt="Album cover" />

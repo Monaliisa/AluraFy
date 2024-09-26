@@ -11,7 +11,7 @@ const Home = () => {
         <main className="home-page">
             <Header />
             <CardList title={"Recommended for you"} setSelectedSong={setSelectedSong} />
-            <CardList title={"Your favorites"} setSelectedSong={setSelectedSong} />
+            <CardList title={"Artists"} setSelectedSong={setSelectedSong} />
             {selectedSong && <MusicPlayer selectedSong={selectedSong} setSelectedSong={setSelectedSong} />}
         </main>
     )

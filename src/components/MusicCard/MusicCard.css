@@ -6,6 +6,10 @@
 
 .music-card img{
     border-radius: 10px;
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    margin-bottom: 8px;
 }
 
 .music-card h3, .music-card p{
@@ -17,4 +21,5 @@
 
 .music-card p{
     color:  var(--Black);
+    opacity: 50%;
 }
