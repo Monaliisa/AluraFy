@@ -18,15 +18,3 @@ const Home = () => {
 }
 
 export default Home;
-
-/*
-{
-    title: "FLORIDA!!!",
-    artist: "Taylor Swift",
-    artistId: 1,
-    albumCover: "TTPD.png",
-    genre: "Pop",
-    link: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3",
-    favorite: false
-}
-*/

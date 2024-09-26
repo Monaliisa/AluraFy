@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import Header from '../../components/Header';
-import MusicForms from './MusicForms';
+import MusicForms from './SongForm';
 import SuccessModal from './SuccessModal';
-import './Forms.css';
+import './NewSong.css';
 
-const Forms = () => {
+const NewSong = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [formData, setFormData] = useState({
         artist: '',
@@ -35,4 +35,4 @@ const Forms = () => {
     )
 }
 
-export default Forms;
+export default NewSong;

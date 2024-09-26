@@ -1,0 +1,76 @@
+.form-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw; 
+}
+
+.form-container {
+    border-radius: 10px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    width: 300px; 
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--Black);
+}
+
+.form-group {
+    font-weight: 400;
+    color: var(--Black);
+}
+
+.form-group input {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 4px 4px #00000025;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 8px 16px;
+    width: 100%;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: var(--GreyDetails);
+    font-family: "Poppins", sans-serif;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.button-send,
+.button-cancel {
+    border: none;
+    color: var(--Background-camp-text);
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    width: 142px;
+}
+
+.button-send {
+    background-color: #000;
+    color: var(--Background-camp-text);
+    border-radius: 10px;
+}
+
+.button-cancel {
+    background-color: var( --GreyDetails);
+    border-radius: 10px;
+    color: #000;
+}

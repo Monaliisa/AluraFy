@@ -1,7 +1,7 @@
-import './MusicForms.css'
+import './ArtistForm.css'
 import { useNavigate } from 'react-router-dom';
 
-const MusicForms = ({ onSubmit, formData, setFormData }) => {
+const ArtistForm = ({ onSubmit, formData, setFormData }) => {
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -14,7 +14,7 @@ const MusicForms = ({ onSubmit, formData, setFormData }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (formData.artist && formData.songName && formData.albumCover && formData.songLink) {
+        if (formData.name && formData.image) {
             onSubmit();
         } else {
             alert('Please, fill in all fields');
@@ -22,46 +22,26 @@ const MusicForms = ({ onSubmit, formData, setFormData }) => {
     };
     return (
         <section className="form-section">
-            <h1 className='form-title'>Add a Song</h1>
+            <h1 className='form-title'>Add a new artist</h1>
             <form className="form-container" onSubmit={handleSubmit}>
                 <label className="form-group">
                     Artist name:
                     <input
                         type="text"
                         name="artist"
-                        value={formData.artist}
+                        value={formData.name}
                         onChange={handleChange}
                         placeholder="Enter artist name"
                     />
                 </label>
                 <label className="form-group">
-                    Song name:
-                    <input
-                        type="text"
-                        name="songName"
-                        value={formData.songName}
-                        onChange={handleChange}
-                        placeholder="Enter song name"
-                    />
-                </label>
-                <label className="form-group">
-                    Album cover:
+                    Artist image:
                     <input
                         type="url"
                         name="albumCover"
-                        value={formData.albumCover}
+                        value={formData.image}
                         onChange={handleChange}
                         placeholder="Image URL"
-                    />
-                </label>
-                <label className="form-group">
-                    Song link:
-                    <input
-                        type="url"
-                        name="songLink"
-                        value={formData.songLink}
-                        onChange={handleChange}
-                        placeholder="Song URL"
                     />
                 </label>
                 <div className="button-group">
@@ -76,4 +56,4 @@ const MusicForms = ({ onSubmit, formData, setFormData }) => {
     );
 };
 
-export default MusicForms;
+export default ArtistForm;

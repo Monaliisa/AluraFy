@@ -8,10 +8,12 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import SearchIcon from '@mui/icons-material/Search';
 import Search from '../Search';
+import AddButton from './AddButton';
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [showAddButton, setShowAddButton] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -19,6 +21,10 @@ const Header = () => {
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle('dark-mode', !isDarkMode);
   };
+
+  const toggleAddButton = () => {
+    setShowAddButton(!showAddButton);
+  }
 
   const handleSearchClick = () => {
     setShowSearch(!showSearch);
@@ -47,13 +53,16 @@ const Header = () => {
           />
         </div>
 
-        {!showSearch && !(location.pathname === "/forms") && (
-          <AddCircleIcon
-            onClick={() => navigate("/forms")}
-            className={`add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`}
-            fontSize="large"
-            alt="Botão para adicionar músicas"
-          />
+        {!showSearch && !(location.pathname === "/new-song" || location.pathname === "/new-artist") && (
+          <>
+            <AddCircleIcon
+              onClick={toggleAddButton}
+              className={`add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`}
+              fontSize="large"
+              alt="Botão para adicionar músicas"
+            />
+            <AddButton showAddButton={showAddButton} />
+          </>
         )}
 
         {!showSearch && (
