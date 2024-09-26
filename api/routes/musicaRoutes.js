@@ -30,6 +30,53 @@ router.get("/musica", MusicaController.buscarTodasMusicas);
 
 /**
  * @swagger
+ * /musica/artista:
+ *   get:
+ *     summary: Retorna as músicas de um artista pelo nome
+ *     tags: [Musicas]
+ *     parameters:
+ *       - in: query
+ *         name: nome
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Nome do artista para buscar suas músicas
+ *     responses:
+ *       200:
+ *         description: Lista de músicas do artista
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Musica'
+ *       404:
+ *         description: Artista não encontrado
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 mensagem:
+ *                   type: string
+ *                   example: "Artista não encontrado"
+ *       400:
+ *         description: Parâmetro 'nome' obrigatório
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 mensagem:
+ *                   type: string
+ *                   example: "O parâmetro 'nome' é obrigatório."
+ *     example:
+ *       /musica/artista?nome=Snoop
+ */
+router.get("/musica/artista", MusicaController.buscarMusicaPeloArtista);
+
+/**
+ * @swagger
  * /musica:
  *   post:
  *     summary: Cria uma nova música

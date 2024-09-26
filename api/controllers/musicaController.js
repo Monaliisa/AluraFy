@@ -1,4 +1,6 @@
+const { where } = require("sequelize");
 const database = require("../models");
+const { Op } = require('sequelize');
 
 class MusicaController {
 
@@ -45,6 +47,30 @@ class MusicaController {
             return res.status(500).json(error.message)
         }
     }
+
+    static async buscarMusicaPeloArtista(req, res) {
+        const { nome }  = req.query;
+        try {
+            const artistaEncontrado = await database.Artista.findOne({
+                where: {
+                    nome: {
+                        [Op.like]: `%${nome}%` 
+                    }
+                }
+            });
+    
+            if (!artistaEncontrado) {
+                return res.status(404).json({ mensagem: "Artista não encontrado" });
+            }
+
+            const musicas = await database.Musica.findAll({ where: { id_artista: Number(artistaEncontrado.id) } });
+    
+            return res.status(200).json(musicas);
+        } catch (error) {
+            return res.status(500).json({ mensagem: error.message });
+        }
+    }
+    
 }
 
 module.exports = MusicaController;
