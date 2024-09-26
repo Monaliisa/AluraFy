@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
-import MusicCard from '../MusicCard';
-import './CardList.css';
+import Card from '../Card';
+import './SongList.css';
 
-const CardList = ({ title, setSelectedSong }) => {
+const SongList = ({ setSelectedSong }) => {
     const [songs, setSongs] = useState([]);
     const [artists, setArtists] = useState([]);
 
@@ -25,7 +25,7 @@ const CardList = ({ title, setSelectedSong }) => {
 
     return (
         <section className="cards-container">
-            <h3 className="list-title">{title}</h3>
+            <h3 className="list-title">Recomendados para você</h3>
             <div className="song-list">
                 {songs.map((s, index) => {
                     const artist = artists.find(a => a.id === s.id_artista)
@@ -39,9 +39,10 @@ const CardList = ({ title, setSelectedSong }) => {
                         link: s.link,
                         favorite: false
                     }
+                    
                     return (
                         <div key={index}>
-                            <MusicCard song={song} setSelectedSong={setSelectedSong} />
+                            <Card type="song" data={song} setSelectedSong={setSelectedSong} />
                         </div>
                     );
                 })}
@@ -50,7 +51,7 @@ const CardList = ({ title, setSelectedSong }) => {
 
     );
 }
-export default CardList;
+export default SongList;
 
 /*
 {

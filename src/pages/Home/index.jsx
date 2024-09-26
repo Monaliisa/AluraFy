@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import CardList from '../../components/CardList';
+import SongList from '../../components/SongList';
+import ArtistList from '../../components/ArtistList';
 import Header from '../../components/Header';
 import MusicPlayer from '../../components/MusicPlayer';
 import "./Home.css"
@@ -10,8 +11,8 @@ const Home = () => {
     return (
         <main className="home-page">
             <Header />
-            <CardList title={"Recommended for you"} setSelectedSong={setSelectedSong} />
-            <CardList title={"Artists"} setSelectedSong={setSelectedSong} />
+            <SongList setSelectedSong={setSelectedSong} />
+            <ArtistList />
             {selectedSong && <MusicPlayer selectedSong={selectedSong} setSelectedSong={setSelectedSong} />}
         </main>
     )

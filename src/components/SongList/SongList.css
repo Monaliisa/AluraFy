@@ -1,0 +1,35 @@
+.cards-container {
+    margin: .5vh 0 0 2.5vw;
+    width:95vw;
+}
+
+.list-title {
+    font-size: 24px;
+    color:  var(--Black);
+}
+
+.song-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 12px 0;
+    width: 95vw;
+}
+
+/* width */
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--MediumGrey);
+    border-radius: 10px;
+}
