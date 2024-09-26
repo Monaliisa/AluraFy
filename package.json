@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Monaliisa/AluraFy#readme",
   "dependencies": {
     "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
     "express": "^4.21.0",
     "sequelize": "^6.37.3",
     "sqlite3": "^5.1.7",
