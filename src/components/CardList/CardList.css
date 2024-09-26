@@ -1,11 +1,10 @@
 .cards-container {
-    margin: 2.5vh 0 0 2.5vw;
+    margin: .5vh 0 0 2.5vw;
     width:95vw;
 }
 
 .list-title {
     font-size: 24px;
-    margin-bottom: 2vh;
     color:  var(--Black);
 }
 
