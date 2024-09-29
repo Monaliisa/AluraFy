@@ -1,35 +1,31 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from '../../components/Header';
-import MusicForms from './SongForm';
+import SongForm from './SongForm';
 import SuccessModal from './SuccessModal';
 import './NewSong.css';
 
 const NewSong = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const [formData, setFormData] = useState({
-        artist: '',
-        songName: '',
-        albumCover: '',
-        songLink: ''
-    });
+    const [artists, setArtists] = useState([]);
 
-    const handleFormSubmit = () => {
-        setIsModalVisible(true);
-    }
+    useEffect(() => {
+        fetch("http://localhost:3000/artista")
+            .then(response => response.json())
+            .then(data => setArtists(data))
+            .catch(e => console.error(e))
+    }, [])
 
     return (
         <>
             {isModalVisible && 
                 <SuccessModal 
                     setIsModalVisible={setIsModalVisible} 
-                    setFormData={setFormData} 
                 />
             }
             <Header />
-            <MusicForms 
-                onSubmit={handleFormSubmit} 
-                formData={formData} 
-                setFormData={setFormData} 
+            <SongForm 
+                artists={artists}
+                setIsModalVisible={setIsModalVisible}
             />
         </>
     )

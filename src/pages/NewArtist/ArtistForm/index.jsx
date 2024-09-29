@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { addNewArtist } from '../service/addNewArtist';
 import './ArtistForm.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -9,6 +8,8 @@ const ArtistForm = ({ setIsModalVisible }) => {
     
     const navigate = useNavigate();
 
+    const requestUrl = "http://localhost:3000/artista";
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!name || !image) {
@@ -17,7 +18,19 @@ const ArtistForm = ({ setIsModalVisible }) => {
         }
 
         try {
-            fetch(addNewArtist(name, image))
+            fetch(requestUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                }, 
+                body: JSON.stringify({
+                    id: null,
+                    nome: name,
+                    imagem: image,
+                    createdAt: null,
+                    updatedAt: null
+                })
+            })
             setIsModalVisible(true)
         } catch (e) {
             console.error(e)

@@ -13,6 +13,8 @@
     margin: 0 auto; 
     padding: 20px; 
     width: 300px; 
+    display: flex;
+    flex-direction: column;
 }
 
 .form-title {
@@ -26,17 +28,18 @@
     color: var(--Black);
 }
 
-.form-group input {
+.form-group input, .form-group select {
     border-radius: 10px;
     border: none;
     box-shadow: 0px 4px 4px #00000025;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
     margin: 10px 0;
     padding: 8px 16px;
     width: 100%;
 }
 
-.form-group input:focus {
+.form-group input:focus, .form-group select {
     outline: none;
 }
 
