@@ -1,23 +1,26 @@
+import { useState } from 'react';
+import { addNewArtist } from '../service/addNewArtist';
 import './ArtistForm.css'
 import { useNavigate } from 'react-router-dom';
 
-const ArtistForm = ({ onSubmit, formData, setFormData }) => {
+const ArtistForm = ({ setIsModalVisible }) => {
+    const [name, setName] = useState("");
+    const [image, setImage] = useState("");
+    
     const navigate = useNavigate();
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (formData.name && formData.image) {
-            onSubmit();
-        } else {
+        if (!name || !image) {
             alert('Please, fill in all fields');
+            return;
+        }
+
+        try {
+            fetch(addNewArtist(name, image))
+            setIsModalVisible(true)
+        } catch (e) {
+            console.error(e)
         }
     };
     return (
@@ -29,8 +32,8 @@ const ArtistForm = ({ onSubmit, formData, setFormData }) => {
                     <input
                         type="text"
                         name="artist"
-                        value={formData.name}
-                        onChange={handleChange}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         placeholder="Enter artist name"
                     />
                 </label>
@@ -39,8 +42,8 @@ const ArtistForm = ({ onSubmit, formData, setFormData }) => {
                     <input
                         type="url"
                         name="albumCover"
-                        value={formData.image}
-                        onChange={handleChange}
+                        value={image}
+                        onChange={(e) => setImage(e.target.value)}
                         placeholder="Image URL"
                     />
                 </label>

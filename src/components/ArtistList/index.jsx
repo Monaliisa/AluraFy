@@ -3,18 +3,7 @@ import { useEffect, useState } from 'react';
 import Card from '../Card';
 import './ArtistList.css';
 
-const ArtistList = () => {
-    const [artists, setArtists] = useState([]);
-
-    const artistUrl = "http://localhost:3000/artista";
-
-    useEffect(() => {
-        fetch(artistUrl)
-            .then(response => response.json())
-            .then(data => setArtists(data))
-            .catch(error => console.error(error));
-    }, [])
-
+const ArtistList = ({ artists }) => {
     return (
         <section className="cards-container">
             <h3 className="list-title">Artistas</h3>

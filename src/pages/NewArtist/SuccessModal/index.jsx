@@ -1,14 +1,8 @@
 import { CheckCircle } from '@mui/icons-material';
 import './SuccessModal.css';
 
-const SuccessModal = ({setIsModalVisible, setFormData}) => {
+const SuccessModal = ({setIsModalVisible}) => {
     const handleCloseModal = () => {
-        setFormData({
-            artist: '',
-            songName: '',
-            albumCover: '',
-            songLink: ''
-        })
         setIsModalVisible(false)
     }
 

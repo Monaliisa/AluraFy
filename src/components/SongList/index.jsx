@@ -3,26 +3,7 @@ import { useEffect, useState } from 'react';
 import Card from '../Card';
 import './SongList.css';
 
-const SongList = ({ setSelectedSong }) => {
-    const [songs, setSongs] = useState([]);
-    const [artists, setArtists] = useState([]);
-
-    const songsUrl = "http://localhost:3000/musica";
-    const artistUrl = "http://localhost:3000/artista";
-
-    useEffect(() => {
-        fetch(songsUrl)
-            .then(response => response.json())
-            .then(data => setSongs(data))
-            .catch(error => console.error(error));
-
-        fetch(artistUrl)
-            .then(response => response.json())
-            .then(data => setArtists(data))
-            .catch(error => console.error(error));
-        
-    }, [])
-
+const SongList = ({ setSelectedSong, songs, artists }) => {
     return (
         <section className="cards-container">
             <h3 className="list-title">Recomendados para você</h3>
