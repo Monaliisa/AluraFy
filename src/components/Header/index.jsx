@@ -51,7 +51,7 @@ const Header = () => {
 
       <div className="buttons">
         <div className='search-on'>
-        <SearchIcon
+        {/* <SearchIcon
           onClick={() => {
             handleSearchClick(); 
             if (location.pathname !== "/search") {
@@ -59,7 +59,7 @@ const Header = () => {
             }
           }}
   className={`toggle-icon add-icon ${isDarkMode ? 'dark-icon' : 'light-icon'}`}
-/>
+/> */}
 
         </div>
 

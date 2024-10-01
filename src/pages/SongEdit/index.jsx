@@ -1,32 +1,40 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-
 const SongEdit = () => {
-    const { id } = useParams(); // Captura o ID da música
+    const { id } = useParams(); 
     const navigate = useNavigate();
     
     const [song, setSong] = useState(null);
     const [songName, setSongName] = useState("");
     const [albumCover, setAlbumCover] = useState("");
     const [songLink, setSongLink] = useState("");
-    const requestUrl = `http://localhost:3000/musica/${id}`; 
-    console.log(requestUrl);
+    const requestUrl = `http://localhost:3000/musica/${id}`; // URL do PUT
 
     useEffect(() => {
-        // Função para buscar a música
+        // Função para buscar a música via PUT
         const fetchSong = async () => {
             try {
-                const response = await fetch(requestUrl);
+                
+                const response = await fetch(requestUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({}) 
+                });
+                
                 const data = await response.json();
                 console.log(data);
-                setSong(data); 
-                setSongName(data.title);
-                setAlbumCover(data.albumCover);
+                
+                
+                setSong(data);
+                setSongName(data.title || data.titulo); 
+                setAlbumCover(data.albumCover || data.capa_da_musica);
                 setSongLink(data.link);
                 
             } catch (error) {
-                console.error(error);
+                console.error('Erro ao recuperar a música:', error);
             }
         };
 
@@ -36,13 +44,13 @@ const SongEdit = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Verifica se todos os campos estão preenchidos
+        
         if (!songName || !albumCover || !songLink) {
             alert('Please, fill in all fields');
             return;
         }
 
-        // Atualiza a música
+        
         try {
             await fetch(requestUrl, {
                 method: "PUT",
@@ -57,13 +65,11 @@ const SongEdit = () => {
             });
 
             alert("Song updated successfully!");
-            navigate("/"); // Redireciona após a atualização
+            navigate("/"); 
         } catch (error) {
-            console.error(error);
+            console.error('Erro ao atualizar a música:', error);
         }
     };
-
-   
 
     return (
         <section className="form-section">

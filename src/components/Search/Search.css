@@ -35,6 +35,9 @@
     width: 70%;
     max-width: 300px;    
   }
+  .search-container .search-input::placeholder{
+    
+  }
 
   .search-off{
   display: none !important;
