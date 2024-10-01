@@ -20,3 +20,12 @@
     cursor: pointer;
     text-decoration: underline;
 }
+
+@media (max-width: 768px){
+
+    .add-button{
+        top: 20vw;
+        right: 1vh;
+    }
+
+}

@@ -49,6 +49,10 @@
   display: none !important;
 }
 
+
+
+
+
 @media (max-width: 768px) {
   .search-on {
     display: block !important;
@@ -56,7 +60,7 @@
 
   .header {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 0%!important;
     justify-content: space-between;
     align-items: center;

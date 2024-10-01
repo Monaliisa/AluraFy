@@ -25,3 +25,11 @@
     gap: 8px;
     color: var(--Black);
 }
+
+@media (max-width: 768px){
+    .modal{
+       margin: auto;
+       width: 80%;
+       text-align: center; 
+    }
+}
