@@ -9,35 +9,33 @@ const SongEdit = () => {
     const [songName, setSongName] = useState("");
     const [albumCover, setAlbumCover] = useState("");
     const [songLink, setSongLink] = useState("");
-    const requestUrl = `http://localhost:3000/musica/${id}`; // URL do PUT
+    const [artist, setArtist] = useState("");
+    const requestUrl = `http://localhost:3000/musica/${id}`;
 
     useEffect(() => {
-        // Função para buscar a música via PUT
         const fetchSong = async () => {
             try {
-                
                 const response = await fetch(requestUrl, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({}) 
+                    body: JSON.stringify({})
                 });
                 
                 const data = await response.json();
                 console.log(data);
                 
-                
                 setSong(data);
                 setSongName(data.title || data.titulo); 
                 setAlbumCover(data.albumCover || data.capa_da_musica);
                 setSongLink(data.link);
-                
+                setArtist(data.artist || data.id_artista); 
             } catch (error) {
                 console.error('Erro ao recuperar a música:', error);
             }
         };
-
+    
         fetchSong();
     }, [requestUrl]);
 
@@ -60,21 +58,43 @@ const SongEdit = () => {
                 body: JSON.stringify({
                     titulo: songName,
                     capa_da_musica: albumCover,
-                    link: songLink
+                    link: songLink,
+                    id_artista: artist
                 })
             });
 
-            alert("Song updated successfully!");
+           
             navigate("/"); 
         } catch (error) {
             console.error('Erro ao atualizar a música:', error);
         }
     };
 
+    const [artists, setArtists] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3000/artista")
+            .then(response => response.json())
+            .then(data => setArtists(data))
+            .catch(e => console.error(e))
+    }, [])
+
     return (
         <section className="form-section">
             <h1 className='form-title'>Edit Song</h1>
             <form className="form-container" onSubmit={handleSubmit}>
+            <label className="form-group">
+                    Artist name:
+                    <select
+                        onChange={(e) => setArtist(e.target.value)} 
+                        value={artist}
+                    >
+                        <option value={0} >Escolha o/a artista</option>
+                        {artists.map(a => (
+                            <option key={a.id} value={a.id}>{a.nome}</option>
+                        ))}
+                    </select>
+                </label>
                 <label className="form-group">
                     Song name:
                     <input
