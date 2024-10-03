@@ -1,0 +1,35 @@
+INSERT INTO Artista (nome, imagem, createdAt, updatedAt)
+VALUES
+('Imagine Dragons', 'https://lastfm.freetls.fastly.net/i/u/770x0/51919b1d56fa751ad2ea9b28a746a155.jpg#51919b1d56fa751ad2ea9b28a746a155', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Coldplay','https://i.discogs.com/aFS7UbMCFk0ewldrBop7b-hQcpObwPE9eZstKP4gYzE/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5NzM1/LTE3MjAwNjU1MTEt/NzM3Mi5qcGVn.jpeg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Taylor Swift','https://lastfm.freetls.fastly.net/i/u/770x0/e3177f6a88bfa5ba3feabdb93340c9da.jpg#e3177f6a88bfa5ba3feabdb93340c9da', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Ed Sheeran', 'https://lastfm.freetls.fastly.net/i/u/770x0/2509d5b4b176e8dde9a86664a84a23fb.jpg#2509d5b4b176e8dde9a86664a84a23fb', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Adele', 'https://lastfm.freetls.fastly.net/i/u/770x0/70e86ffb2b7af32eee63cf6bbbcefcba.jpg#70e86ffb2b7af32eee63cf6bbbcefcba', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Bruno Mars', 'https://lastfm.freetls.fastly.net/i/u/770x0/283e3b3f17e57674faa092f1ce5358f6.jpg#283e3b3f17e57674faa092f1ce5358f6', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Beyoncé', 'https://lastfm.freetls.fastly.net/i/u/770x0/9f9d14d04d5901c06751cd0140213ab5.jpg#9f9d14d04d5901c06751cd0140213ab5', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('The Weeknd', 'https://lastfm.freetls.fastly.net/i/u/770x0/52fa02d1eaac9b86d61be53ce7dee8f3.jpg#52fa02d1eaac9b86d61be53ce7dee8f3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Lady Gaga', 'https://lastfm.freetls.fastly.net/i/u/770x0/49da29b0277743bcbae8f598ca1e4ff6.jpg#49da29b0277743bcbae8f598ca1e4ff6', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Post Malone', 'https://lastfm.freetls.fastly.net/i/u/770x0/c2d4a3532ef11adb2a71ce7df84f1143.jpg#c2d4a3532ef11adb2a71ce7df84f1143', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Dua Lipa', 'https://lastfm.freetls.fastly.net/i/u/770x0/e3dfe4e5b3860bf0b30d642b89364c3a.jpg#e3dfe4e5b3860bf0b30d642b89364c3a', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Katy Perry', 'https://lastfm.freetls.fastly.net/i/u/770x0/2cab8961f3d4cf1486861a7e58b2192a.jpg#2cab8961f3d4cf1486861a7e58b2192a', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Rihanna', 'https://lastfm.freetls.fastly.net/i/u/770x0/3fd40f19bb5475f9aa5b1a5be32fd67f.jpg#3fd40f19bb5475f9aa5b1a5be32fd67f', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Maroon 5', 'https://lastfm.freetls.fastly.net/i/u/770x0/d9ff1625d5477b75aad82a2e89e8f19c.jpg#d9ff1625d5477b75aad82a2e89e8f19c', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Travis Scott', 'https://lastfm.freetls.fastly.net/i/u/770x0/fdc7ed8bdd61f05d77c8f685cc76d155.jpg#fdc7ed8bdd61f05d77c8f685cc76d155', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO Musicas (titulo, id_artista, capa_da_musica, genero, link, createdAt, updatedAt)
+VALUES
+('Radioactive', 1, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277396.jpg', 'Rock', 'https://ia801302.us.archive.org/28/items/Radioactive_201601/Radioactive.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Fix You', 2, 'https://lastfm.freetls.fastly.net/i/u/770x0/622617821a6b40048456b8c15c805adc.jpg#622617821a6b40048456b8c15c805adc', 'Alternative', 'https://ia801708.us.archive.org/4/items/coldplay-fix-you-lyrics/Coldplay%20-%20Fix%20You%20Lyrics.mp3 ', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Blank Space', 3, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277406.jpg', 'Pop', 'https://ia601004.us.archive.org/3/items/003tailorswiftblankspace_201910/003%20Tailor%20Swift%20-%20Blank%20Space.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Perfect', 4, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277411.jpg', 'Pop', 'https://archive.org/embed/ok12345_20181117_0437/k-Perfect%20-%20Ed%20Sheeran.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Someone Like You', 5, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277416.jpg', 'Pop', 'https://ia802307.us.archive.org/16/items/SomeoneLikeYou_163/11SomeoneLikeYou.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('24K Magic', 6, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277421.jpg', 'Funk', 'https://dn720308.ca.archive.org/0/items/24-k-magic-bruno-mars/01%20-%2024K%20Magic.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Crazy in Love', 7, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277426.jpg', 'R&B', 'https://ia601802.us.archive.org/24/items/beyonce-crazy-in-love-ft-jay-z/beyonce-crazy-in-love-ft-jay-z.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Blinding Lights', 8, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277431.jpg', 'Synthwave', 'https://dn720302.ca.archive.org/0/items/the-weeknd-blinding-lights-official-audio_202103/The%20Weeknd%20-%20Blinding%20Lights%20%28Official%20Audio%29.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Levitating', 9, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277436.jpg', 'Pop', 'https://ia902207.us.archive.org/14/items/dua-lipa-levitating-lyrics-1/Dua%20Lipa%20-%20Levitating%20%28Lyrics%29%20%281%29.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Bad Romance', 10, 'https://lastfm.freetls.fastly.net/i/u/500x500/77a7fb267f689750ad32fd52d2dc4a71.jpg', 'Pop', 'https://ia800107.us.archive.org/29/items/LadyGaGaBadRomancelyrics/Lady%20GaGa%20-%20Bad%20Romance%20%28lyrics%29.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Stay', 11, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277446.jpg', 'Pop', 'https://ia804603.us.archive.org/20/items/stay-the-kid-laroi-justin-bieber-top-all-stars-binh-chon-2022-v.-a-playlist-nhac-cua-tui/Stay%20-%20The%20Kid%20LAROI%2C%20Justin%20Bieber%20-%20Top%20All%20Stars%20B%C3%ACnh%20Ch%E1%BB%8Dn%202022%20-%20V.A%20-%20Playlist%20NhacCuaTui.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Girls Like You', 12, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277451.jpg', 'Pop', 'https://ia802805.us.archive.org/7/items/maroon5girlslikeyou/Maroon%205%20Girls%20Like%20You.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Sicko Mode', 13, 'https://br.web.img3.acsta.net/pictures/19/09/16/09/22/5277456.jpg', 'Hip Hop', 'https://ia804604.us.archive.org/12/items/travis-scott-sicko-mode-ft.-drake_202111/Travis%20Scott%20-%20SICKO%20MODE%20ft.%20Drake.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Hotline Bling', 14, 'https://lastfm.freetls.fastly.net/i/u/770x0/954af72670e7f6def07ca3861ef7908e.jpg#954af72670e7f6def07ca3861ef7908e', 'Hip Hop', 'https://ia903203.us.archive.org/1/items/DrakeHotlineBling_201812/Drake%20-%20Hotline%20Bling.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Complicated', 15, 'https://lastfm.freetls.fastly.net/i/u/770x0/b8591d73c8380f36bf49a4590bac28cd.jpg#b8591d73c8380f36bf49a4590bac28cd', 'Pop', 'https://ia902901.us.archive.org/32/items/20200304_20200304_1203/%282002%29%2014%20Complicated%20%28Mix%29.mp3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
