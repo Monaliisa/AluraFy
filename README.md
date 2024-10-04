@@ -1,28 +1,22 @@
-# AluraFy
-Este repositório refere-se  ao desafio técnico do PDI 3º TRI 2024 da Escola Suporte Educacional da Alura. 
+# AluraFy - API
+Essa branch do repositório é responsável por conter o projeto Backend da aplicação.
 
 ## Objetivo Geral 
 
-Desenvolvimento de um sistema de streaming de música, chamado Alurafy.
+Desenvolvimento de todos os endpoints que posteriormente serão consumidos pelo sistema de Frontend.
 
-
-## Sobre o Projeto
-
- Para realizar cada etapa do projeto a equipe foi dividida em Squads. Tendo cada squad uma responsabilidade no desevolvimento no projeto, de acordo com as seguintes áreas:
-
- * Squad Laranja: Data Science
- * Squad Azul: Front-End
- * Squad Verde: Back-End
-
-
-## Ao longo do projeto, as seguintes habilidades foram desenvolvidas:
 
 
 ## Tecnologias Utilizadas
+          
+<div style="display: flex; flex-direction: row; justify-content: space-between;">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" width="70" height="70"/>
 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg" width="70" height="70"/>
 
- 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" width="40" height="40" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" width="40" height="40" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="40" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sequelize/sequelize-original-wordmark.svg" width="70" height="70"/>
+</div>
+          
 
 ## Passo a Passo para Configuração e Execução do Projeto
 
