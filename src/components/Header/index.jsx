@@ -1,4 +1,4 @@
-import {DarkMode, LightMode, AddCircle} from '@mui/icons-material';  
+import { DarkMode, LightMode, AddCircle } from '@mui/icons-material';
 
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -14,7 +14,7 @@ import AddButton from './AddButton';
 
 
 
-const Header = () => {
+const Header = ({ setFilteredSongs, setFilteredArtists, setNoResults, setArtistList }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [showAddButton, setShowAddButton] = useState(false);
@@ -43,15 +43,15 @@ const Header = () => {
         onClick={() => navigate("/")}
       />
 
-      <div className="search-container" 
+      <div className="search-container"
         onClick={() => location.pathname !== "/search" && navigate("/search")}
       >
-        <Search />
+        <Search setFilteredSongs={setFilteredSongs} setFilteredArtists={setFilteredArtists} setNoResults={setNoResults} setArtistList={ setArtistList } />
       </div>
 
       <div className="buttons">
         <div className='search-on'>
-        {/* <SearchIcon
+          {/* <SearchIcon
           onClick={() => {
             handleSearchClick(); 
             if (location.pathname !== "/search") {

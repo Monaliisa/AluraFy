@@ -17,6 +17,7 @@ const ArtistList = ({ artists }) => {
                         <div key={a.id}>
                             <Card type="artist" data={artist} />
                         </div>
+                        
                     );
                 })}
             </div>

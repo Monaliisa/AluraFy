@@ -1,10 +1,10 @@
 import './SearchMessage.css';
 
-const SearchMessage = () => {
+const SearchMessage = ({ title, message }) => {
     return(
         <section className="container">
-            <h3>Play what you love</h3>
-            <p>Search for songs and artists</p>
+            <h3>{ title }</h3>
+            <p>{ message }</p>
         </section>
     )
 }

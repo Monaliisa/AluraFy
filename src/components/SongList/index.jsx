@@ -2,15 +2,15 @@ import { useEffect, useState } from 'react';
 import Card from '../Card';
 import './SongList.css';
 
-const SongList = ({ setSelectedSong, songs, artists }) => {
+const SongList = ({ title, setSelectedSong, songs, artists }) => {
     
     if (!songs || !artists) {
         return <div>Loading...</div>; 
     }
-
+ 
     return (
         <section className="cards-container">
-            <h3 className="list-title">Recomendados para você</h3>
+            <h3 className="list-title">{ title }</h3>
             <div className="song-list">
                 {songs.length > 0 ? (
                     songs.map((s, index) => {

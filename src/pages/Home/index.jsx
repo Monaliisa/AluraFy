@@ -27,8 +27,8 @@ const Home = () => {
 
     return (
         <main className="home-page">
-            <Header />
-            <SongList songs={songs} artists={artists} setSelectedSong={setSelectedSong} />
+            <Header/>
+            <SongList title={"Recomendados para você"} songs={songs} artists={artists} setSelectedSong={setSelectedSong} />
             <ArtistList artists={artists} />
             {selectedSong && <MusicPlayer selectedSong={selectedSong} setSelectedSong={setSelectedSong} />}
         </main>
