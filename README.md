@@ -58,6 +58,11 @@ Nessa seção, apresentamos uma tabela que descreve o diagrama de entidades e re
 
 ## Ao longo do projeto, as seguintes habilidades foram desenvolvidas:
 
+- Comunicação entre equipe
+- Trabalhar com as ferramentas brModelo e DB Browser
+- Comandos em SQL
+- Modelagem de dados
+
 
 ## Tecnologias Utilizadas
 
