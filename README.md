@@ -1,11 +1,11 @@
 # AluraFy - API
 Essa branch do repositório é responsável por conter o projeto Backend da aplicação.
 
+![GIF da documentação da API, passando por todos os endpoints criados e listados](https://i.imgur.com/JufDgKQ.gif)
+
 ## Objetivo Geral 
 
 Desenvolvimento de todos os endpoints que posteriormente serão consumidos pelo sistema de Frontend.
-
-
 
 ## Tecnologias Utilizadas
           
@@ -17,7 +17,6 @@ Desenvolvimento de todos os endpoints que posteriormente serão consumidos pelo 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sequelize/sequelize-original-wordmark.svg" width="70" height="70"/>
 </div>
           
-
 ## Passo a Passo para Configuração e Execução do Projeto
 
 ### 1. Clonar o Repositório
